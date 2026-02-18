@@ -1,0 +1,293 @@
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a2e;
+  /* Navy for titles */
+  --text-main: #222222;
+  /* Specific dark gray for body */
+  --muted: #777777;
+  /* Citation and subtitle */
+  --border: #eeeeee;
+  --max-width: 720px;
+  /* Updated from 780px */
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  color: var(--text-main);
+  background: #f5f5f7;
+  /* Shaded background for margins */
+  line-height: 2.0;
+  /* Updated from 1.6 per request */
+  word-break: keep-all;
+  overflow-wrap: break-word;
+  -webkit-font-smoothing: antialiased;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 40px auto;
+  /* Added top/bottom margin for 'floating page' look */
+  padding: 80px 60px;
+  /* Increased side padding for centered text */
+  background: #ffffff;
+  /* White page */
+  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
+  /* Soft shadow for depth */
+  min-height: calc(100vh - 200px);
+  border-radius: 2px;
+}
+
+@media (max-width: 600px) {
+  main {
+    margin: 0;
+    padding: 60px 1.5rem;
+    box-shadow: none;
+    border-radius: 0;
+  }
+}
+
+h1 {
+  font-family: var(--font-title);
+  color: #000000;
+  /* Pure black for modern weight */
+  font-weight: 800;
+  /* Bolder for modern Sans-serif */
+  line-height: 1.1;
+  margin-bottom: 0.8rem;
+  letter-spacing: -0.05em;
+  /* Tighter for modern look */
+  text-align: center;
+  font-size: 3.2rem;
+  /* Slightly larger */
+}
+
+.subtitle {
+  font-family: var(--font-noto-sans);
+  color: var(--muted);
+  font-size: 1.15rem;
+  text-align: center;
+  margin-bottom: 3.5rem;
+  letter-spacing: -0.02em;
+  line-height: 1.4;
+}
+
+h2 {
+  font-family: var(--font-title);
+  color: var(--foreground);
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin-top: 3.5rem;
+  margin-bottom: 1.2rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  position: relative;
+}
+
+h2::before {
+  content: "";
+  display: inline-block;
+  width: 4px;
+  height: 1.2rem;
+  background: var(--foreground);
+  border-radius: 2px;
+  flex-shrink: 0;
+  box-shadow: 2px 0 0 rgba(26, 26, 46, 0.1);
+}
+
+p {
+  margin-bottom: 1.2rem;
+  font-size: 1.25rem;
+  /* 20px */
+}
+
+strong {
+  font-weight: 700;
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--border);
+  margin: 4rem 0;
+}
+
+blockquote {
+  border-left: 3px solid #dddddd;
+  padding-left: 1.5rem;
+  margin: 1.5rem 0;
+  color: #444444;
+}
+
+blockquote p {
+  font-size: 1.1rem;
+  /* Slightly increased to match body */
+  font-style: italic;
+  margin-bottom: 0;
+  line-height: 1.9;
+}
+
+cite {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: normal;
+  margin-top: 0.3rem;
+  margin-left: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.references {
+  margin-top: 6rem;
+  padding-top: 2rem;
+  border-top: 2px solid var(--foreground);
+}
+
+.references h3 {
+  font-family: var(--font-title);
+  font-size: 1.3rem;
+  margin-bottom: 1.5rem;
+}
+
+.references ul {
+  list-style: none;
+}
+
+.references li {
+  font-size: 0.9rem;
+  color: #555555;
+  margin-bottom: 0.5rem;
+}
+
+nav {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 60px 60px 20px;
+  /* More modern spacing */
+  display: flex;
+  gap: 3.5rem;
+  font-size: 1.6rem;
+  /* Reduced by 20% from 2rem */
+  font-family: var(--font-title);
+  font-weight: 900;
+  /* Extra bold for modern impact */
+  letter-spacing: -0.04em;
+  text-transform: uppercase;
+  /* Modern minimalist style */
+}
+
+nav a {
+  text-decoration: none;
+  color: #000000;
+  transition: transform 0.2s, opacity 0.2s;
+  display: inline-block;
+}
+
+nav a:hover {
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
+
+.floating-cta {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2rem;
+  background: var(--foreground);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-weight: 700;
+  border-radius: 50px;
+  /* More rounded for floating feel */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s;
+}
+
+.floating-cta:hover {
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+  opacity: 1;
+}
+
+.floating-cta .arrow {
+  transition: transform 0.3s;
+}
+
+.floating-cta:hover .arrow {
+  transform: translateX(5px);
+}
+
+/* Hide on very small screens if necessary or adjust position */
+@media (max-width: 600px) {
+  .floating-cta {
+    bottom: 1.5rem;
+    right: 1.5rem;
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
+
+.next-page-transition {
+  margin-top: 6rem;
+  text-align: center;
+}
+
+.next-page-transition hr {
+  margin-bottom: 4rem;
+}
+
+.transition-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.teaser {
+  font-family: var(--font-title);
+  font-size: 1.2rem;
+  color: var(--muted);
+}
+
+.cta-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 1rem 2.5rem;
+  background: var(--foreground);
+  color: white;
+  text-decoration: none;
+  font-family: var(--font-title);
+  font-weight: 700;
+  border-radius: 4px;
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+.cta-button:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+.cta-button .arrow {
+  transition: transform 0.2s;
+}
+
+.cta-button:hover .arrow {
+  transform: translateX(4px);
+}
