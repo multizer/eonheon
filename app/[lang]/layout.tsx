@@ -1,3 +1,4 @@
+import type { Metadata } from "next";
 import { Noto_Serif_KR, Noto_Sans_KR, Inter } from "next/font/google";
 import "./globals.css";
 import Link from "next/link";
