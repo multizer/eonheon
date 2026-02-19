@@ -112,9 +112,9 @@ h2::before {
 }
 
 /* h2 아래 구분선과 첫 문단 사이 간격 */
-h2 + p,
-h2 + ul,
-h2 + ol {
+h2+p,
+h2+ul,
+h2+ol {
   margin-top: 2rem;
 }
 
@@ -125,8 +125,8 @@ p {
 }
 
 /* Drop Cap: h2 바로 다음 첫 번째 p의 첫 글자 */
-h2 + p::first-letter,
-h2 + hr + p::first-letter {
+h2+p::first-letter,
+h2+hr+p::first-letter {
   float: left;
   font-family: var(--font-title);
   font-size: 4.2rem;
@@ -165,8 +165,8 @@ blockquote p {
 }
 
 /* blockquote 바로 다음 cite-like em (— Author) */
-blockquote + p,
-blockquote + p em {
+blockquote+p,
+blockquote+p em {
   font-size: 0.9rem;
   color: var(--muted);
   font-style: normal;
@@ -188,12 +188,14 @@ cite {
   margin-bottom: 2rem;
 }
 
-ul, ol {
+ul,
+ol {
   padding-left: 1.5rem;
   margin-bottom: 1.6em;
 }
 
-ul li, ol li {
+ul li,
+ol li {
   font-size: 1.1rem;
   line-height: 1.8;
   margin-bottom: 0.4em;
@@ -268,14 +270,16 @@ nav a::after {
   transition: transform 0.25s ease-out;
 }
 
-nav a:hover::after {
+nav a:hover::after,
+nav a.active::after {
   transform: scaleX(1);
   transform-origin: bottom left;
 }
 
-nav a:hover {
+nav a:hover,
+nav a.active {
   opacity: 1;
-  /* Keep opacity full for hover effect */
+  /* Keep opacity full for hover and active state */
 }
 
 .floating-cta {

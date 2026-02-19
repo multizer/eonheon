@@ -27,6 +27,7 @@ export const metadata: Metadata = {
 
 
 import ReadingProgressBar from "@/components/ReadingProgressBar";
+import Nav from "@/components/Nav";
 
 export default async function RootLayout({
   children,
@@ -45,12 +46,7 @@ export default async function RootLayout({
         '--font-title': 'var(--font-inter), var(--font-noto-sans), sans-serif'
       } as any}>
         <ReadingProgressBar />
-        <nav>
-          <Link href={isKo ? "/ko" : "/"}>{isKo ? "홈" : "Home"}</Link>
-          <Link href={isKo ? "/ko/essay" : "/essay"}>{isKo ? "에세이" : "Essay"}</Link>
-          <Link href={isKo ? "/ko/academic" : "/academic"}>{isKo ? "학술" : "Academic"}</Link>
-          <Link href={isKo ? "/" : "/ko"}>{isKo ? "EN" : "KO"}</Link>
-        </nav>
+        <Nav lang={lang} />
         <main>{children}</main>
         <footer style={{ maxWidth: 'var(--max-width)', margin: '0 auto', padding: '40px 24px', fontSize: '0.8rem', opacity: 0.5, borderTop: '1px solid var(--border)' }}>
           © 2026 eonheon.com
