@@ -45,7 +45,6 @@ export default async function RootLayout({
           <Link href={isKo ? "/ko" : "/"}>{isKo ? "홈" : "Home"}</Link>
           <Link href={isKo ? "/ko/essay" : "/essay"}>{isKo ? "에세이" : "Essay"}</Link>
           <Link href={isKo ? "/ko/academic" : "/academic"}>{isKo ? "학술" : "Academic"}</Link>
-          <span style={{ flex: 1 }}></span>
           <Link href={isKo ? "/" : "/ko"}>{isKo ? "EN" : "KO"}</Link>
         </nav>
         <main>{children}</main>

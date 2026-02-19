@@ -3,11 +3,11 @@ title: "If Jesus Had Not Appeared, Would We Know the Jews as We Do Today?"
 subtitle: "Where Did the “Kingdom of Priests” Begin?"
 ---
 
-I. A Question of a Name
+## I. A Question of a Name
 
 There is a word we use almost unconsciously:
 
-Jew.
+**Jew.**
 
 Yet this word is not merely an ethnic designation.
 It is a historical category formed through covenant, distinction, exile, endurance, and long tension with surrounding civilizations.
@@ -23,22 +23,22 @@ How does a covenantal people become historically recognized?
 The Torah establishes a covenant with a particular people.
 Yet from the beginning, that covenant carries a universal horizon.
 
-“All the families of the earth shall be blessed through you.”
-— Genesis 12:3
+> “All the families of the earth shall be blessed through you.”
+> — Genesis 12:3
 
-“You shall be to Me a kingdom of priests.”
-— Exodus 19:6
+> “You shall be to Me a kingdom of priests.”
+> — Exodus 19:6
 
 A priest does not exist for himself.
 A priest presupposes the existence of others.
 
 The Torah further declares:
 
-“The same law shall apply to the native and to the stranger who sojourns among you.”
-— Numbers 15:16
+> “The same law shall apply to the native and to the stranger who sojourns among you.”
+> — Numbers 15:16
 
-“My house shall be called a house of prayer for all nations.”
-— Isaiah 56:7
+> “My house shall be called a house of prayer for all nations.”
+> — Isaiah 56:7
 
 Election is particular.
 But its direction is universal.
@@ -50,7 +50,7 @@ The question, then, becomes:
 
 How did this internal tension become visible in history?
 
-II. Paul — A Man Who Saw the Tension
+## II. Paul — A Man Who Saw the Tension
 
 Paul was a Pharisee, deeply formed by Torah.
 He did not reject the covenant.
@@ -68,8 +68,8 @@ But how would that holiness be recognized beyond Israel?
 
 On the road to Damascus, Paul encountered Jesus.
 
-“The law was our tutor leading us to the Messiah.”
-— Galatians 3:24
+> “The law was our tutor leading us to the Messiah.”
+> — Galatians 3:24
 
 For Paul, this was not the collapse of Torah.
 It was not the cancellation of covenant.
@@ -82,7 +82,7 @@ Not replacement — but historical inflection.
 Paul did not see himself as leaving Judaism.
 He saw something within its story becoming visible in a new way.
 
-III. Who Is Jesus?
+## III. Who Is Jesus?
 
 We now stand before the deeper question:
 
@@ -100,7 +100,7 @@ It offers a question.
 If the Torah already contained a universal trajectory,
 must Jesus be understood as entirely external to it?
 
-The Ontological Dimension
+### The Ontological Dimension
 
 Jesus called himself “Son of Man.”
 He was called “Son of God.”
@@ -109,16 +109,16 @@ These are relational and vocational terms.
 
 Yet there is also this statement:
 
-“Before Abraham was, I am.”
-— John 8:58
+> “Before Abraham was, I am.”
+> — John 8:58
 
 This is not merely a claim about chronology.
 It may be a statement about being.
 
 John opens his Gospel this way:
 
-“In the beginning was the Word, and the Word was with God, and the Word was God.”
-— John 1:1
+> “In the beginning was the Word, and the Word was with God, and the Word was God.”
+> — John 1:1
 
 The Logos need not be read as a second deity.
 It may be understood as God’s self-expression —
@@ -136,7 +136,7 @@ Like a melody written before it is performed.
 Nothing new was invented.
 Something eternal became audible.
 
-IV. Revelation and Explanation
+### IV. Revelation and Explanation
 
 Early proclamation was simple.
 
@@ -153,7 +153,7 @@ It simply asks whether the language of metaphysics may have overshadowed the sim
 Perhaps the earliest witness was not attempting to divide divine being,
 but to testify that the God of Israel had acted in history.
 
-V. A Final Question
+## V. A Final Question
 
 Jesus did not abolish the covenant.
 Israel remains within it.

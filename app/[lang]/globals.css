@@ -7,8 +7,8 @@
   --muted: #777777;
   /* Citation and subtitle */
   --border: #eeeeee;
-  --max-width: 720px;
-  /* Updated from 780px */
+  --max-width: 900px;
+  /* Updated from 720px for wider premium feel */
 }
 
 * {
@@ -24,8 +24,8 @@ body {
 
 body {
   color: var(--text-main);
-  background: #f5f5f7;
-  /* Shaded background for margins */
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  /* Premium subtle gradient */
   line-height: 2.0;
   /* Updated from 1.6 per request */
   word-break: keep-all;
@@ -33,18 +33,46 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 main {
   max-width: var(--max-width);
-  margin: 40px auto;
-  /* Added top/bottom margin for 'floating page' look */
-  padding: 80px 60px;
-  /* Increased side padding for centered text */
+  margin: 60px auto;
+  /* Increased top/bottom margin for floating feel */
+  padding: 100px 80px;
+  /* Increased padding for spaciousness */
   background: #ffffff;
   /* White page */
-  box-shadow: 0 0 40px rgba(0, 0, 0, 0.05);
-  /* Soft shadow for depth */
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.03);
+  /* Layered soft shadow for depth */
   min-height: calc(100vh - 200px);
-  border-radius: 2px;
+  border-radius: 8px;
+  /* Slightly rounded corners */
+  animation: fadeInUp 0.8s ease-out forwards;
+  /* Entrance animation */
+}
+
+/* Drop Caps for Essay Pages */
+/* Targets the first paragraph inside the markdown-body section of an article */
+article .markdown-body>p:first-of-type::first-letter {
+  font-family: var(--font-title);
+  font-size: 3.5rem;
+  float: left;
+  line-height: 0.8;
+  margin-right: 0.8rem;
+  margin-top: 0.2rem;
+  color: var(--foreground);
+  font-weight: 700;
 }
 
 @media (max-width: 600px) {
@@ -67,8 +95,10 @@ h1 {
   letter-spacing: -0.05em;
   /* Tighter for modern look */
   text-align: center;
-  font-size: 3.2rem;
-  /* Slightly larger */
+  font-size: 3.8rem;
+  /* Larger for impact */
+  letter-spacing: -0.06em;
+  /* Tighter tracking for large text */
 }
 
 .subtitle {
@@ -85,32 +115,36 @@ h2 {
   font-family: var(--font-title);
   color: var(--foreground);
   font-weight: 700;
-  font-size: 1.4rem;
-  margin-top: 3.5rem;
-  margin-bottom: 1.2rem;
-  padding-bottom: 0.5rem;
+  font-size: 1.6rem;
+  /* Slightly larger */
+  margin-top: 4.5rem;
+  /* Increased top margin for better separation */
+  margin-bottom: 1.5rem;
+  padding-bottom: 0.8rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 1.2rem;
   position: relative;
+  letter-spacing: -0.02em;
 }
 
 h2::before {
   content: "";
   display: inline-block;
   width: 4px;
-  height: 1.2rem;
+  height: 1.4rem;
   background: var(--foreground);
   border-radius: 2px;
   flex-shrink: 0;
-  box-shadow: 2px 0 0 rgba(26, 26, 46, 0.1);
+  box-shadow: 2px 0 10px rgba(26, 26, 46, 0.15);
 }
 
 p {
-  margin-bottom: 1.2rem;
+  margin-bottom: 1.5rem;
   font-size: 1.25rem;
-  /* 20px */
+  letter-spacing: -0.01em;
+  /* Subtle tightening for readability */
 }
 
 strong {
@@ -120,22 +154,25 @@ strong {
 hr {
   border: 0;
   border-top: 1px solid var(--border);
-  margin: 4rem 0;
+  margin: 5rem 0;
 }
 
 blockquote {
-  border-left: 3px solid #dddddd;
-  padding-left: 1.5rem;
-  margin: 1.5rem 0;
-  color: #444444;
+  border-left: 4px solid var(--foreground);
+  /* Use foreground color for impact */
+  padding: 1.5rem 2rem;
+  margin: 2.5rem 0;
+  background: rgba(0, 0, 0, 0.02);
+  /* Very subtle background */
+  border-radius: 0 4px 4px 0;
 }
 
 blockquote p {
-  font-size: 1.1rem;
-  /* Slightly increased to match body */
+  font-size: 1.15rem;
   font-style: italic;
+  color: #333333;
   margin-bottom: 0;
-  line-height: 1.9;
+  line-height: 2.0;
 }
 
 cite {
@@ -173,14 +210,14 @@ cite {
 nav {
   max-width: var(--max-width);
   margin: 0 auto;
-  padding: 60px 60px 20px;
+  padding: 60px 24px 20px;
   /* More modern spacing */
   display: flex;
-  gap: 3.5rem;
+  justify-content: space-between;
   font-size: 1.6rem;
   /* Reduced by 20% from 2rem */
   font-family: var(--font-title);
-  font-weight: 900;
+  font-weight: 400;
   /* Extra bold for modern impact */
   letter-spacing: -0.04em;
   text-transform: uppercase;
