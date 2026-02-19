@@ -42,6 +42,11 @@ The universal dimension should therefore be understood not as theological innova
 
 Recent scholarship (often associated with the “New Perspective on Paul”) increasingly interprets Paul not as the destroyer of Judaism, but as a figure operating within the internal debates of Second Temple Judaism.
 
+- **E. P. Sanders** defined Judaism as ‘Covenantal Nomism’ and viewed Paul as a reinterpreter of Judaism rather than its misinterpreter (*Paul and Palestinian Judaism*, 1977).
+- **James D. G. Dunn** argued that what Paul critiqued was not the Torah itself, but rather Jewish ‘boundary markers’ (“The New Perspective on Paul,” 1983).
+- **N. T. Wright** describes Paul as one who recognized the phase in which the Abrahamic covenant is fulfilled through the inclusion of the nations (*Paul and the Faithfulness of God*, 2013).
+
+
 Paul did not abolish Torah.  
 Rather, he perceived the moment in which the God of Israel became recognizable within the Gentile world.
 

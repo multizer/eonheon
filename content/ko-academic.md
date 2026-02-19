@@ -30,6 +30,11 @@ subtitle: "학술 보강 섹션 (Scholarly Supplement)"
 
 최근 학계(New Perspective on Paul 등)에서는 바울을 유대교의 파괴자가 아닌, 제2성전기 유대교 내부에서 언약의 확장을 목격한 인물로 재평가합니다.
 
+- **E. P. Sanders**는 유대교를 ‘언약적 율법주의(Covenantal Nomism)’로 규정하며 바울을 유대교의 오해자가 아닌 재해석자로 보았다 (*Paul and Palestinian Judaism*, 1977).
+- **James D. G. Dunn**은 바울이 비판한 대상이 율법 자체가 아니라 유대인의 ‘경계 표지(boundary markers)’였다고 주장하였다 (“The New Perspective on Paul,” 1983).
+- **N. T. Wright**는 바울을 아브라함 언약이 이방인 포함을 통해 성취되는 국면을 인식한 인물로 설명한다 (*Paul and the Faithfulness of God*, 2013).
+
+
 바울은 토라를 부정하지 않았습니다. 다만, 언약의 하나님이 어떻게 이방 세계 속에서도 동일하게 인식될 수 있는지 그 ‘가시화의 장면’을 목격하고 증언했을 뿐입니다. 이는 유대교로부터의 이탈이 아니라, 유대교 서사 내부에서 발생한 중대한 전환입니다.
 
 ## 4. 로고스 개념의 유대적 배경
