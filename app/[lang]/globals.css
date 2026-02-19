@@ -249,6 +249,16 @@ nav {
   /* Modern minimalist style */
 }
 
+@media (max-width: 600px) {
+  nav {
+    padding: 30px 1.5rem 10px;
+    font-size: 1.1rem;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
 nav a {
   text-decoration: none;
   color: var(--text-main);
