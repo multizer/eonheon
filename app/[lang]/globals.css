@@ -1,15 +1,12 @@
 :root {
   --background: #ffffff;
   --foreground: #1a1a2e;
-  /* Navy for titles */
-  --text-main: #222222;
-  /* Specific dark gray for body */
-  --muted: #777777;
-  /* Citation and subtitle */
+  --text-main: #000000;
+  --muted: #444444;
   --border: #eeeeee;
   --max-width: 900px;
-  /* Updated from 720px for wider premium feel */
 }
+
 
 * {
   box-sizing: border-box;
@@ -24,10 +21,8 @@ body {
 
 body {
   color: var(--text-main);
-  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-  /* Premium subtle gradient */
-  line-height: 2.0;
-  /* Updated from 1.6 per request */
+  background: linear-gradient(135deg, #f0f0f0 0%, #e4e4e4 100%);
+  line-height: 1.85;
   word-break: keep-all;
   overflow-wrap: break-word;
   -webkit-font-smoothing: antialiased;
@@ -47,33 +42,16 @@ body {
 
 main {
   max-width: var(--max-width);
-  margin: 60px auto;
-  /* Increased top/bottom margin for floating feel */
-  padding: 100px 80px;
-  /* Increased padding for spaciousness */
-  background: #ffffff;
-  /* White page */
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.05), 0 10px 20px rgba(0, 0, 0, 0.03);
-  /* Layered soft shadow for depth */
+  margin: 40px auto 80px;
+  padding: 80px 90px;
+  background: var(--background);
+  color: var(--text-main);
+  box-shadow: 0 2px 40px rgba(0, 0, 0, 0.06), 0 1px 8px rgba(0, 0, 0, 0.04);
   min-height: calc(100vh - 200px);
-  border-radius: 8px;
-  /* Slightly rounded corners */
-  animation: fadeInUp 0.8s ease-out forwards;
-  /* Entrance animation */
+  border-radius: 4px;
 }
 
-/* Drop Caps for Essay Pages */
-/* Targets the first paragraph inside the markdown-body section of an article */
-article .markdown-body>p:first-of-type::first-letter {
-  font-family: var(--font-title);
-  font-size: 3.5rem;
-  float: left;
-  line-height: 0.8;
-  margin-right: 0.8rem;
-  margin-top: 0.2rem;
-  color: var(--foreground);
-  font-weight: 700;
-}
+
 
 @media (max-width: 600px) {
   main {
@@ -86,45 +64,39 @@ article .markdown-body>p:first-of-type::first-letter {
 
 h1 {
   font-family: var(--font-title);
-  color: #000000;
-  /* Pure black for modern weight */
+  color: var(--text-main);
   font-weight: 800;
-  /* Bolder for modern Sans-serif */
-  line-height: 1.1;
-  margin-bottom: 0.8rem;
-  letter-spacing: -0.05em;
-  /* Tighter for modern look */
+  line-height: 1.08;
+  margin-bottom: 1rem;
   text-align: center;
-  font-size: 3.8rem;
-  /* Larger for impact */
-  letter-spacing: -0.06em;
-  /* Tighter tracking for large text */
+  font-size: 3.6rem;
+  letter-spacing: -0.04em;
+  padding-bottom: 0;
 }
 
 .subtitle {
   font-family: var(--font-noto-sans);
   color: var(--muted);
-  font-size: 1.15rem;
+  font-size: 1rem;
   text-align: center;
-  margin-bottom: 3.5rem;
-  letter-spacing: -0.02em;
+  margin-bottom: 4rem;
+  letter-spacing: 0.02em;
   line-height: 1.4;
+  font-weight: 400;
 }
 
 h2 {
   font-family: var(--font-title);
-  color: var(--foreground);
+  color: var(--text-main);
   font-weight: 700;
-  font-size: 1.6rem;
-  /* Slightly larger */
-  margin-top: 4.5rem;
-  /* Increased top margin for better separation */
-  margin-bottom: 1.5rem;
-  padding-bottom: 0.8rem;
+  font-size: 1.5rem;
+  margin-top: 5rem;
+  margin-bottom: 0;
+  padding-bottom: 1rem;
   border-bottom: 1px solid var(--border);
   display: flex;
   align-items: center;
-  gap: 1.2rem;
+  gap: 1rem;
   position: relative;
   letter-spacing: -0.02em;
 }
@@ -133,18 +105,37 @@ h2::before {
   content: "";
   display: inline-block;
   width: 4px;
-  height: 1.4rem;
-  background: var(--foreground);
+  height: 1.2rem;
+  background: var(--text-main);
   border-radius: 2px;
   flex-shrink: 0;
-  box-shadow: 2px 0 10px rgba(26, 26, 46, 0.15);
+}
+
+/* h2 아래 구분선과 첫 문단 사이 간격 */
+h2 + p,
+h2 + ul,
+h2 + ol {
+  margin-top: 2rem;
 }
 
 p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.6em;
   font-size: 1.25rem;
-  letter-spacing: -0.01em;
-  /* Subtle tightening for readability */
+  letter-spacing: -0.015em;
+}
+
+/* Drop Cap: h2 바로 다음 첫 번째 p의 첫 글자 */
+h2 + p::first-letter,
+h2 + hr + p::first-letter {
+  float: left;
+  font-family: var(--font-title);
+  font-size: 4.2rem;
+  font-weight: 900;
+  line-height: 0.78;
+  margin-right: 0.12em;
+  margin-top: 0.08em;
+  color: var(--text-main);
+  letter-spacing: -0.03em;
 }
 
 strong {
@@ -158,22 +149,34 @@ hr {
 }
 
 blockquote {
-  border-left: 4px solid var(--foreground);
-  /* Use foreground color for impact */
-  padding: 1.5rem 2rem;
-  margin: 2.5rem 0;
-  background: rgba(0, 0, 0, 0.02);
-  /* Very subtle background */
-  border-radius: 0 4px 4px 0;
+  border-left: 3px solid var(--text-main);
+  padding: 0.5rem 0 0.5rem 2rem;
+  margin: 2.5rem 0 0.5rem;
+  background: transparent;
 }
 
 blockquote p {
   font-size: 1.15rem;
   font-style: italic;
-  color: #333333;
+  color: var(--text-main);
   margin-bottom: 0;
-  line-height: 2.0;
+  line-height: 1.8;
+  opacity: 0.85;
 }
+
+/* blockquote 바로 다음 cite-like em (— Author) */
+blockquote + p,
+blockquote + p em {
+  font-size: 0.9rem;
+  color: var(--muted);
+  font-style: normal;
+  display: block;
+  margin-top: 0.3rem;
+  margin-left: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* blockquote border는 --text-main으로 자동 적용, 별도 dark override 불필요 */
 
 cite {
   display: block;
@@ -183,6 +186,26 @@ cite {
   margin-top: 0.3rem;
   margin-left: 1.5rem;
   margin-bottom: 2rem;
+}
+
+ul, ol {
+  padding-left: 1.5rem;
+  margin-bottom: 1.6em;
+}
+
+ul li, ol li {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  margin-bottom: 0.4em;
+  color: var(--text-main);
+}
+
+ol {
+  list-style-type: decimal;
+}
+
+ul {
+  list-style-type: disc;
 }
 
 .references {
@@ -226,14 +249,33 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: #000000;
+  color: var(--text-main);
   transition: transform 0.2s, opacity 0.2s;
   display: inline-block;
+  position: relative;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--text-main);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 
 nav a:hover {
-  opacity: 0.5;
-  transform: translateY(-2px);
+  opacity: 1;
+  /* Keep opacity full for hover effect */
 }
 
 .floating-cta {
@@ -245,8 +287,9 @@ nav a:hover {
   align-items: center;
   gap: 0.75rem;
   padding: 1rem 2rem;
-  background: var(--foreground);
-  color: white;
+  background: var(--foreground) !important;
+  color: var(--background) !important;
+  /* Inverted high contrast */
   text-decoration: none;
   font-family: var(--font-title);
   font-weight: 700;

@@ -25,6 +25,9 @@ export const metadata: Metadata = {
   description: "A digital space for essays and academic work.",
 };
 
+
+import ReadingProgressBar from "@/components/ReadingProgressBar";
+
 export default async function RootLayout({
   children,
   params,
@@ -41,6 +44,7 @@ export default async function RootLayout({
         fontFamily: `var(--font-noto-sans), sans-serif`,
         '--font-title': 'var(--font-inter), var(--font-noto-sans), sans-serif'
       } as any}>
+        <ReadingProgressBar />
         <nav>
           <Link href={isKo ? "/ko" : "/"}>{isKo ? "홈" : "Home"}</Link>
           <Link href={isKo ? "/ko/essay" : "/essay"}>{isKo ? "에세이" : "Essay"}</Link>
