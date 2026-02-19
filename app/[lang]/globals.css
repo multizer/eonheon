@@ -385,3 +385,46 @@ nav a.active {
 .cta-button:hover .arrow {
   transform: translateX(4px);
 }
+
+/* Print Styles */
+@media print {
+
+  nav,
+  .floating-cta,
+  .next-page-transition,
+  #comments,
+  #contact,
+  .no-print,
+  .reading-progress-bar {
+    display: none !important;
+  }
+
+  main {
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    max-width: none !important;
+  }
+
+  body {
+    background: white !important;
+  }
+
+  h1,
+  h2,
+  h3,
+  p,
+  li {
+    color: black !important;
+  }
+
+  /* Force page breaks if needed for better PDF layout */
+  h2 {
+    page-break-before: auto;
+    page-break-after: avoid;
+  }
+
+  blockquote {
+    page-break-inside: avoid;
+  }
+}

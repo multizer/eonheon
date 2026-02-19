@@ -1,6 +1,7 @@
 import { getContent } from "@/lib/content";
 import ContentRenderer from "@/components/ContentRenderer";
 import Link from "next/link";
+import DownloadPDFButton from "@/components/DownloadPDFButton";
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
@@ -9,6 +10,7 @@ export default async function Page({ params }: { params: Promise<{ lang: string 
 
     return (
         <>
+            <DownloadPDFButton lang={lang} />
             <ContentRenderer data={data} lang={lang} />
 
             {/* Floating CTA Button */}
