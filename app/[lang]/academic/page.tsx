@@ -2,6 +2,16 @@ import { getContent } from "@/lib/content";
 import ContentRenderer from "@/components/ContentRenderer";
 import Link from "next/link";
 import DownloadPDFButton from "@/components/DownloadPDFButton";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const data = await getContent(lang, "academic");
+    return {
+        title: data?.title || "Academic Supplement",
+        description: data?.subtitle || "Scholarly supplement on covenant continuity and historical inflection.",
+    };
+}
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;

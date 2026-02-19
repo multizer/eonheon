@@ -21,13 +21,51 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  title: "eonheon.com",
-  description: "A digital space for essays and academic work.",
+  metadataBase: new URL("https://eonheon.com"),
+  title: {
+    default: "eonheon.com",
+    template: "%s | eonheon.com",
+  },
+  description: "A digital space for essays and academic work reflecting on covenant, history, and being.",
+  keywords: ["theology", "essay", "academic", "covenant", "history", "Jesus", "Jews"],
+  authors: [{ name: "eonheon" }],
+  openGraph: {
+    type: "website",
+    locale: "ko_KR",
+    url: "https://eonheon.com",
+    siteName: "eonheon.com",
+    images: [
+      {
+        url: "/icon.svg", // Using icon.svg as a placeholder OG image
+        width: 1200,
+        height: 630,
+        alt: "eonheon.com",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "eonheon.com",
+    description: "A digital space for essays and academic work.",
+    images: ["/icon.svg"],
+  },
+  alternates: {
+    canonical: "./",
+    languages: {
+      'ko': '/ko',
+      'en': '/en',
+    },
+  },
+  robots: {
+    index: true,
+    follow: true,
+  }
 };
 
 
 import ReadingProgressBar from "@/components/ReadingProgressBar";
 import Nav from "@/components/Nav";
+import JsonLd from "@/components/JsonLd";
 
 export default async function RootLayout({
   children,
@@ -41,6 +79,20 @@ export default async function RootLayout({
 
   return (
     <html lang={lang}>
+      <head>
+        <JsonLd data={{
+          "@context": "https://schema.org",
+          "@type": "WebSite",
+          "name": "eonheon.com",
+          "url": "https://eonheon.com",
+          "description": "A digital space for essays and academic work.",
+          "inLanguage": lang,
+          "publisher": {
+            "@type": "Person",
+            "name": "eonheon"
+          }
+        }} />
+      </head>
       <body className={`${notoSerifKR.variable} ${notoSansKR.variable} ${inter.variable}`} style={{
         fontFamily: `var(--font-noto-sans), sans-serif`,
         '--font-title': 'var(--font-inter), var(--font-noto-sans), sans-serif'

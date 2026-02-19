@@ -11,7 +11,7 @@ export default function ContentRenderer({ data, lang }: { data: ContentData | nu
     }
 
     return (
-        <article>
+        <article lang={lang}>
             <header>
                 <h1>{data.title}</h1>
                 {data.subtitle && (
@@ -23,8 +23,6 @@ export default function ContentRenderer({ data, lang }: { data: ContentData | nu
                 <ReactMarkdown
                     components={{
                         h2: ({ children, ...props }) => {
-                            // Potential emoji logic: if text starts with emoji-like character, it's already in Markdown.
-                            // We'll just let the styling handle the h2.
                             return <h2 {...props}>{children}</h2>;
                         },
                         blockquote: ({ children }) => {

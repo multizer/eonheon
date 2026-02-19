@@ -1,6 +1,16 @@
 import { getContent } from "@/lib/content";
 import ContentRenderer from "@/components/ContentRenderer";
 import Link from "next/link";
+import { Metadata } from "next";
+
+export async function generateMetadata({ params }: { params: Promise<{ lang: string }> }): Promise<Metadata> {
+    const { lang } = await params;
+    const data = await getContent(lang, "essay");
+    return {
+        title: data?.title || "Essay",
+        description: data?.subtitle || "A theological essay on covenant, history, and being.",
+    };
+}
 
 export default async function Page({ params }: { params: Promise<{ lang: string }> }) {
     const { lang } = await params;
