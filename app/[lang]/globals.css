@@ -232,6 +232,28 @@ ul {
   margin-bottom: 0.5rem;
 }
 
+.authors-note {
+  margin-top: 5rem;
+  padding: 2rem;
+  border: 1px solid var(--border);
+  background-color: #fbfbfb;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: var(--muted);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.authors-note strong {
+  color: var(--text-main);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-style: normal;
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.85rem;
+}
+
 nav {
   max-width: var(--max-width);
   margin: 0 auto;

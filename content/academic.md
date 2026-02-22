@@ -148,3 +148,8 @@ Within this framework, covenantal continuity and the limits of human interpretat
 ---
 
 *This study presupposes the irrevocability of Israel’s covenant and the internal coherence of the Torah, while maintaining an open horizon for theological reflection.*
+
+<div class="authors-note">
+  <strong>Author’s Note</strong>
+  AI tools assisted in editorial refinement. The arguments and conclusions remain the author’s own.
+</div>

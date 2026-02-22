@@ -1,5 +1,6 @@
 import { ContentData } from "@/lib/content";
 import ReactMarkdown from 'react-markdown';
+import rehypeRaw from 'rehype-raw';
 
 export default function ContentRenderer({ data, lang }: { data: ContentData | null, lang: string }) {
     if (!data) {
@@ -21,6 +22,7 @@ export default function ContentRenderer({ data, lang }: { data: ContentData | nu
 
             <section className="markdown-body">
                 <ReactMarkdown
+                    rehypePlugins={[rehypeRaw]}
                     components={{
                         h2: ({ children, ...props }) => {
                             return <h2 {...props}>{children}</h2>;

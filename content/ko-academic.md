@@ -119,3 +119,8 @@ subtitle: "학술 보강 섹션 (Scholarly Supplement)"
 ---
 
 *본 연구는 이스라엘 언약의 취소 불가능성과 토라의 내적 일관성을 전제하며, 신학적 성찰의 창을 열어두고자 합니다.*
+
+<div class="authors-note">
+  <strong>Author’s Note</strong>
+  AI tools assisted in editorial refinement. The arguments and conclusions remain the author’s own.
+</div>

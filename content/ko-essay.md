@@ -179,4 +179,10 @@ subtitle: "언약, 역사, 존재의 관계를 성찰하는 신학적 에세이"
 완전하지 않은 해석은 곧 종교적 유죄인가?  
 아니면 인간 조건 속에서 발생한 한계인가?
 
-이 질문은 여전히 열려 있다.
+
+
+<div class="authors-note">
+  <strong>Author’s Note</strong>
+  This essay was refined with the assistance of ChatGPT in editing and word choice.
+</div>
+

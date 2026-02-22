@@ -231,4 +231,10 @@ So the question returns:
 Is incomplete interpretation automatically religious guilt?  
 Or is it, at times, a condition shaped by history, environment, and human limitation?
 
-The question remains open.
+
+
+<div class="authors-note">
+  <strong>Author’s Note</strong>
+  This essay was refined with the assistance of ChatGPT in editing and word choice.
+</div>
+
